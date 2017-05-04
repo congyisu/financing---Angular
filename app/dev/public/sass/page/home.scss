@@ -1,0 +1,176 @@
+
+.head_index {
+  width: 100%;
+  height: auto;
+  background: #EE5859;
+  .head {
+    width: 100%;
+    height: 55px;
+    padding: 0 3%;
+    display: -webkit-flex;
+    img {
+      &:nth-child(1) {
+        height: 35px;
+        margin: 6px auto;
+      }
+      &:last-child {
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+      }
+    }
+  }
+  .top {
+    width: 100%;
+  }
+  .banner, .swiper-container, .swiper-wrapper, .swiper-slide img {
+    width: 100%;
+    height: 150px;
+    .point .swiper-pagination-bullet-active {
+      background: #FB6900;
+    }
+  }
+  .deal {
+    padding: 4% 5%;
+    background: #ffffff;
+    display: -webkit-flex;
+    border-bottom: 1px solid #cccccc;
+    .deal_left {
+      border-right: 1px solid #cccccc;
+      p {
+        &:nth-child(1) {
+          color: #aaaaaa;
+        }
+        &:nth-child(2) {
+          margin-top: 5px;
+          b {
+            color: #EE5A58;
+            font-size: 26px;
+            font-weight: normal;
+          }
+          span {
+            color: #EE5A58;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .deal_left, .deal_right {
+      width: 50%;
+    }
+    .deal_right {
+      padding-left: 5%;
+      p {
+        &:nth-child(1) {
+          color: #aaaaaa;
+        }
+        &:nth-child(2) {
+          margin-top: 5px;
+          b {
+            color: #EE5A58;
+            font-size: 26px;
+            font-weight: normal;
+          }
+          span {
+            color: #EE5A58;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+/*---------Ê×Ò³ Ö÷Ìå----------*/
+.homecont {
+  width: 100%;
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: scroll;
+  .infolist {
+    margin: 3%;
+    &:nth-child(odd) {
+      background: #E5F6FF;
+    }
+    &:nth-child(even) {
+      background: #FEFDDF;
+    }
+    .tit {
+      display: -webkit-flex;
+      h2 {
+        text-align: left;
+        color: #ffffff;
+        padding: 3px 6px;
+        &:nth-child(odd) {
+          background: #2AB8E8;
+        }
+        &:nth-child(even) {
+          background: #FF8800;
+        }
+      }
+      h3 {
+        text-align: right;
+        flex-grow: 1;
+        color: #A5A9A8;
+        padding-right: 3%;
+        line-height: 27px;
+      }
+    }
+    .num {
+      display: -webkit-flex;
+      padding: 3% 0;
+      .shouyi, .month, .buy {
+        flex-grow: 1;
+        text-align: center;
+      }
+      .shouyi {
+        position: relative;
+        .profit {
+          width: 130px;
+          margin-top: 10%;
+          b {
+            font-size: 60px;
+            font-weight: normal;
+            color: #FE8900;
+          }
+          span {
+            color: #FE8900;
+            font-size: 22px;
+          }
+        }
+        i {
+          position: absolute;
+          right: 12%;
+          top: 28%;
+          font-size: 16px;
+          color: #BFC0C2;
+        }
+      }
+      .month {
+        span {
+          color: #ADA9A6;
+          display: inline-block;
+          line-height: 26px;
+          padding-top: 23px;
+          b {
+            color: #201F1B;
+            font-size: 24px;
+          }
+        }
+      }
+      .buy {
+        position: relative;
+        b {
+          font-weight: normal;
+          position:absolute;
+          color:#fff;
+          left:37%;
+          top:20px;
+          font-size: 14px;
+        }
+        p {
+          color: #67675F;
+        }
+      }
+    }
+  }
+}

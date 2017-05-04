@@ -1,0 +1,113 @@
+<!--产品页 头部-->
+<div class="head_product">
+    <div class="tophead">
+        <img src="public/img/Top.png" class="top"/>
+
+        <div>
+            <h4>理财产品</h4>
+            <img src="public/img/menu.png"  ng-click="masktoggle()" class="btn"/>
+        </div>
+    </div>
+    <div class="product_tab">
+        <a href="#" class="bg">债权产品</a>
+        <a href="#" style="border-left: 1px solid #EEEEEE;">优选基金</a>
+    </div>
+</div>
+<!--产品页 主体-->
+<section class="productcont" ng-controller="myContainer">
+    <div class="swiper-container content">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide co-list pro-list">
+                <div class="productlist" ng-repeat="y in datalist.data.list | filter:_filt">
+                    <div class="tit">
+                        <h2>{{y.name}}</h2>&nbsp<h3>|&nbsp{{y.safeguardWay}}</h3>
+                    </div>
+                    <div class="num">
+                        <div class="shouyi">
+                            <div class="profit">
+                                <b>{{y.annualRate.slice(0,-4)}}</b>
+                                <span>{{y.annualRate.slice(-4)}}</span>
+                            </div>
+                            <i>年化收益</i>
+                        </div>
+                        <div class="month">
+                            <span>期限<br><b>{{y.investmentHorizon.slice(0,1)}}</b>个月</span>
+                        </div>
+                        <div class="buy">
+                            <my-canvas cvs="y" class="canvas"></my-canvas>
+                            <b>抢购</b>
+
+                            <p>已有<span>{{y.investmentNum}}</span>人购买</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide co-list pro-list">
+                <div class="productlist" ng-repeat="y in datalist.data.list | filter:_filter">
+                    <div class="tit">
+                        <h2>{{y.paymentMethod}}</h2>&nbsp
+                        <h3>&nbsp({{y.remainTime}})<span>{{y.planName}}</span></h3>
+                    </div>
+                    <div class="num">
+                        <div class="shouyi">
+                            <div class="profit jia">
+                                <b>+{{y.annualRate.slice(0,-4)}}</b>
+                                <span>{{y.annualRate.slice(-4)}}</span>
+                            </div>
+                            <i>年化收益</i>
+                        </div>
+                        <div class="month">
+                            <span>单位净值<br>{{y.isNew}}</span>
+                        </div>
+                        <div class="buy">
+                            <my-canvas cvs="y" class="canvas"></my-canvas>
+                            <b>抢购</b>
+
+                            <p>已有<span>{{y.investmentNum}}</span>人购买</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--遮罩层-->
+    <div class="product_mask" ng-show="flags">
+        <div class="masklist1">
+            <ul class="uls1">
+                <li ng-repeat="x in arr1">
+                    <span></span>{{x}}
+                </li>
+            </ul>
+        </div>
+        <div class="masklist2">
+            <ul class="uls2">
+                <li ng-repeat="x in arr2">
+                    <span></span>{{x}}
+                </li>
+            </ul>
+        </div>
+        <div class="mask" ng-click="exit()"></div>
+    </div>
+</section>
+
+<!--产品页 底部-->
+<footer>
+    <div class="foot">
+        <a href="#" ui-sref="home">
+            <img src="public/img/foot_8.jpg"/>
+            <span>首页</span>
+        </a>
+        <a href="#" ui-sref="product" class="on">
+            <img src="public/img/foot_5.jpg"/>
+            <span>理财产品</span>
+        </a>
+        <a href="#" ui-sref="mine">
+            <img src="public/img/foot_3.jpg"/>
+            <span>我的账户</span>
+        </a>
+        <a href="#" ui-sref="more">
+            <img src="public/img/foot_4.jpg"/>
+            <span>更多</span>
+        </a>
+    </div>
+</footer>

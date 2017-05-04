@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>理财</title>
+    <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="public/css/reset.css"/>
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <link rel="stylesheet" href="lib/swiper.min.css"/>
+</head>
+<body ng-controller="myController">
+<div ui-view id="wrap"></div>
+<script src="./lib/angular.min.js"></script>
+<script src="./lib/angular-ui-router.min.js"></script>
+<script src="./lib/swiper.min.js"></script>
+<script src="./lib/iscroll.js"></script>
+<script src="./lib/jquery-3.1.1.min.js"></script>
+<script src="./lib/zepto.min.js"></script>
+<!--入口文件    -->
+<script src="./main.js"></script>
+<script src="./config/routerConfig.js"></script>
+<!--组件-->
+<script src="./decorator/canvas.js"></script>
+<!--pages-->
+<script src="./controllers/home/homeCtrl.js"></script>
+<script src="./controllers/product/productCtrl.js"></script>
+<script src="./controllers/mine/mineCtrl.js"></script>
+<script src="./controllers/more/moreCtrl.js"></script>
+</body>
+</html>

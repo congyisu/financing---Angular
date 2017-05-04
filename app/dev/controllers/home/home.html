@@ -1,0 +1,72 @@
+<!--主页 头部-->
+<div class="head_index">
+    <img src="public/img/Top.png" class="top"/>
+
+    <div class="head">
+        <img src="public/img/logo.png"/>
+        <img src="public/img/erji.png"/>
+    </div>
+    <div class="banner" ng-controller="myBanner">
+        <my-swipe img-arr="arr" config="cfg"></my-swipe>
+    </div>
+    <div class="deal">
+        <div class="deal_left">
+            <p>累计成交金额</p>
+
+            <p><b>20,089.80</b> <span>万元</span></p>
+        </div>
+        <div class="deal_right">
+            <p>为投资人赚取利益</p>
+
+            <p><b>594.89</b> <span>万元</span></p>
+        </div>
+    </div>
+</div>
+<!--主页 主体-->
+<section class="homecont">
+    <div class="infolist" ng-repeat="y in datalist.data.list">
+        <div class="tit">
+            <h2>{{y.name}}</h2>&nbsp<h3>{{y.safeguardWay}}</h3>
+        </div>
+        <div class="num">
+            <div class="shouyi">
+                <div class="profit">
+                    <b>{{y.annualRate.slice(0,-4)}}</b>
+                    <span>{{y.annualRate.slice(-4)}}</span>
+                </div>
+                <i>年化收益</i>
+            </div>
+            <div class="month">
+                    <span>期限<br>
+                    <b>{{y.investmentHorizon.slice(0,1)}}</b>个月</span>
+            </div>
+            <div class="buy">
+                <my-canvas cvs="y" class="canvas"></my-canvas>
+                <b>抢购</b>
+
+                <p>{{y.investmentNum}}人购买</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--主页 底部-->
+<footer>
+    <div class="foot">
+        <a href="#" ui-sref="home" class="on">
+            <img src="public/img/foot_1.jpg"/>
+            <span>首页</span>
+        </a>
+        <a href="#" ui-sref="product">
+            <img src="public/img/foot_2.jpg"/>
+            <span>理财产品</span>
+        </a>
+        <a href="#" ui-sref="mine">
+            <img src="public/img/foot_3.jpg"/>
+            <span>我的账户</span>
+        </a>
+        <a href="#" ui-sref="more">
+            <img src="public/img/foot_4.jpg"/>
+            <span>更多</span>
+        </a>
+    </div>
+</footer>
